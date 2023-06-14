@@ -98,6 +98,9 @@ export const PostContent = styled(ReactMarkdown)`
     padding-left: 2.5rem;
     margin: 1.25rem 0;
   }
+  li {
+    margin-bottom: 0.825rem;
+  }
   img {
     max-width: 100%;
   }
