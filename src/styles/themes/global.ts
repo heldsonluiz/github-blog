@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import cover from '../../assets/cover.png'
+// import cover from '../../assets/cover.png'
 
 export const GlobalStyle = createGlobalStyle`
  * {
@@ -14,9 +14,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    /* background-color: ${(props) => props.theme['bluish-800']}; */
-    background: ${(props) =>
-      props.theme['bluish-800']} url(${cover}) no-repeat top center;
+    background-color: ${(props) => props.theme['bluish-800']};
     color: ${(props) => props.theme['bluish-200']};
     -webkit-font-smoothing: antialiased;
   }

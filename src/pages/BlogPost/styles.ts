@@ -72,10 +72,10 @@ export const PostContent = styled(ReactMarkdown)`
     margin-bottom: 1rem;
   }
   h3 {
-    margin: 1.6rem 0 0;
+    margin: 1.6rem 0 1rem;
     color: ${(props) => props.theme.primary};
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   a {
     text-decoration: none;
@@ -93,11 +93,31 @@ export const PostContent = styled(ReactMarkdown)`
     font-weight: bold;
     border-bottom: 1px solid ${(props) => props.theme['bluish-500']};
   }
-  ul {
-    padding-left: 1.75rem;
-    margin-bottom: 1rem;
+  ul,
+  ol {
+    padding-left: 2.5rem;
+    margin: 1.25rem 0;
   }
   img {
     max-width: 100%;
+  }
+  blockquote {
+    border-left: 3px solid ${(props) => props.theme.primary};
+    padding: 0 1rem;
+  }
+  code {
+    margin: 0;
+    font-size: 0.875rem;
+    white-space: break-spaces;
+    border-radius: 6px;
+    background-color: ${(props) => props.theme['bluish-500']};
+  }
+  pre {
+    background: ${(props) => props.theme['bluish-500']};
+    color: ${(props) => props.theme['bluish-100']};
+    padding: 1rem;
+    font-size: 0.75rem;
+    margin: 1rem;
+    border-radius: 6px;
   }
 `
