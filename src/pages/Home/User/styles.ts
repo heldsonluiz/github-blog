@@ -7,12 +7,19 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   gap: 2rem;
   border-radius: 10px;
-  padding: 2rem 2.25rem;
+  padding: 2.75rem 2rem;
 
   img {
     width: 9.25rem;
     height: 9.25rem;
     border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    img {
+      margin: 0 auto;
+    }
   }
 `
 
@@ -48,7 +55,6 @@ export const UserInfo = styled.div`
 
   a:hover {
     transition: border-bottom 0.2s;
-
     border-bottom: 1px solid ${(props) => props.theme.primary};
   }
 `
@@ -57,18 +63,38 @@ export const UserTitle = styled.section`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
+
+  @media (max-width: 540px) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 `
 export const UserBio = styled.section`
   color: ${(props) => props.theme['bluish-200']};
+  @media (max-width: 768px) {
+    margin: 1rem 0;
+  }
 `
 export const UserDetails = styled.section`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  text-transform: lowercase;
 
   svg {
     line-height: 0;
     margin-right: 0.5rem;
     color: ${(props) => props.theme['bluish-400']};
+  }
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    font-size: 0.875rem;
+
+    svg {
+      width: 24px;
+    }
   }
 `

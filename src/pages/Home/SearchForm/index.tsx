@@ -30,7 +30,11 @@ export function SearchForm() {
     <SearchContainer>
       <SearchContainerTitle>
         <h2>Publicações</h2>
-        <span>{postList.length} publicações</span>
+        <span>
+          {postList.length > 1 || postList.length === 0
+            ? `${postList.length} publicações`
+            : `${postList.length} publicação`}{' '}
+        </span>
       </SearchContainerTitle>
       <form onSubmit={handleSubmit(handleSearchBlogPosts)}>
         <input

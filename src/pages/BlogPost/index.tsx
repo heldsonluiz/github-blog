@@ -98,7 +98,9 @@ export function BlogPost() {
             </span>
             <span>
               <FontAwesomeIcon icon={faComment} />
-              {post.comments} comentários
+              {post.comments > 1 || post.comments === 0
+                ? `${post.comments} comentários`
+                : `${post.comments} comentário`}
             </span>
           </PostDetails>
         </PostInfo>

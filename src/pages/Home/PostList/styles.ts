@@ -5,12 +5,17 @@ export const PostListContainer = styled.div`
   display: grid;
   align-content: center;
   justify-content: space-between;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
 
   a {
     text-decoration: none;
     display: flex;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 `
 export const PostCard = styled.div`

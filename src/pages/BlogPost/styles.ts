@@ -62,11 +62,25 @@ export const PostDetails = styled.div`
     line-height: 0;
     margin-right: 0.5rem;
   }
+
+  @media (max-width: 540px) {
+    align-items: flex-start;
+    gap: 0;
+    flex-direction: column;
+    color: #7b96b2;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }
 `
 export const PostContent = styled(ReactMarkdown)`
   color: ${(props) => props.theme['bluish-200']};
   padding: 2.5rem 2rem;
   line-height: 1.6;
+
+  @media (max-width: 540px) {
+    padding: 2.5rem 0.5rem;
+    font-size: 0.9rem;
+  }
 
   p {
     margin-bottom: 1rem;
